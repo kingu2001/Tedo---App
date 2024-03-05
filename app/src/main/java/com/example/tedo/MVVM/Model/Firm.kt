@@ -1,8 +1,11 @@
 package com.example.tedo.MVVM.Model
 
 data class Firm(
-    val Id : Int,
-    var Name : String,
-    var FullAddress : String,
-    var TestType : Enum<TestType>
+    var Name : String? = null,
+    var FullAddress : String? = null,
+    var SAT : Boolean? = null,
+    var IAT : Boolean? = null,
+    var OAT : Boolean? = null,
+    var FAT : Boolean? = null,
+    var Participants : MutableList<Participant> = mutableListOf()
 )
