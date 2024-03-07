@@ -3,25 +3,38 @@ package com.example.tedo.MVVM.Repository
 import com.example.tedo.MVVM.Model.DefinitionAndAbbreviation
 
 class DefinitionAndAbbreviationRepository{
-    var defAndAbb = mutableListOf<DefinitionAndAbbreviation>()
-    fun create(defAndAbb : String) : DefinitionAndAbbreviation?{
-
+    var defAndAbbList = mutableListOf<DefinitionAndAbbreviation>()
+    fun create(
+        def : String,
+        abb : String
+    ) : DefinitionAndAbbreviation?
+    {
+        val defAndAbb = DefinitionAndAbbreviation(
+            Definition = def,
+            Abbreviation = abb
+        )
+        defAndAbbList.add(defAndAbb)
+        return defAndAbb
     }
 
-    fun getById(id: Int): DefinitionAndAbbreviation? {
-        TODO("Not yet implemented")
+    fun getByDefinition(definition : String): DefinitionAndAbbreviation? {
+        return defAndAbbList.find { it.Definition == definition}
     }
 
-    fun getAll(): List<DefinitionAndAbbreviation> {
-        TODO("Not yet implemented")
+    fun getAll(): MutableList<DefinitionAndAbbreviation> {
+        return defAndAbbList
     }
 
-    fun delete(id: Int) {
-        TODO("Not yet implemented")
+    fun delete(definition : String) : DefinitionAndAbbreviation? {
+        return defAndAbbList.find { it.Definition == definition}.also {defAndAbbList.remove(it)}
     }
 
-    fun update(data: DefinitionAndAbbreviation) {
-        TODO("Not yet implemented")
+    fun update(defAndAbb : DefinitionAndAbbreviation) : DefinitionAndAbbreviation? {
+        val existingDefAndAbb = defAndAbbList.find { it.Definition == defAndAbb.Definition}
+        return existingDefAndAbb.apply{
+            var definition = defAndAbb.Definition
+            var abbreviation = defAndAbb.Abbreviation
+        }
     }
 
 }

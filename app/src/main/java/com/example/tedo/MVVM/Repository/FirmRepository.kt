@@ -3,7 +3,7 @@ import com.example.tedo.MVVM.Model.Firm
 import com.example.tedo.MVVM.Model.Participant
 
 class FirmRepository{
-    val firms = mutableListOf<Firm>()
+    var firmList = mutableListOf<Firm>()
     fun create(
         name : String?,
         fullAddress : String?,
@@ -22,26 +22,26 @@ class FirmRepository{
             FAT = fat,
             Participants = participants
         )
-        firms.add(firm)
+        firmList.add(firm)
         return firm
     }
 
      fun getByName(name : String) : Firm?{
-        return firms.find { it.Name == name }
+        return firmList.find { it.Name == name }
     }
 
     fun getAll() : MutableList<Firm>{
-        return firms
+        return firmList
     }
 
     fun delete(firm : Firm) : Firm? {
         /*return firms.firstOrNull {it.Name == name}?.also { firms.remove(it) }*/
-        return firms.find{it.Name == firm.Name}?.also{firms.remove(it)}
+        return firmList.find{it.Name == firm.Name}.also{firmList.remove(it)}
     }
 
     fun update(firm : Firm) : Firm?{
-        val existingFirm = firms.find { it.Name == firm.Name }
-        return existingFirm?.apply {
+        val existingFirm = firmList.find { it.Name == firm.Name }
+        return existingFirm.apply {
             var name = firm.Name
             var fullAddress = firm.FullAddress
             var sat = firm.SAT

@@ -1,12 +1,12 @@
-package com.example.tedo.MVVM.Model
+package com.example.tedo.MVVM.ViewModel
 
 import android.text.format.DateFormat
 
-data class Revision(
+data class RevisionVM(
     var Number: Int,
     var PageAffected: String,
     var ChapterAffected: String,
     var Description: String,
-    var TestDocument: TestDocument? = null,
+    var TestDocument: TestDocumentVM? = null,
     var Date: DateFormat
 )
