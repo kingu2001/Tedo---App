@@ -26,6 +26,13 @@ class FirmVM(private val firmRepository : FirmRepository) : ViewModel(){
     fun updateFirm(newName:String, newFullAddress:String, newSAT:Boolean, newIAT:Boolean, newFAT:Boolean, newOAT:Boolean){
     }
 
+data class FirmVM(
+    var Name : String? = null,
+    var FullAddress : String? = null,
+    var SAT : Boolean? = null,
+    var IAT : Boolean? = null,
+    var OAT : Boolean? = null,
+    var FAT : Boolean? = null,
+    var Participants : MutableList<ParticipantVM> = mutableListOf()
+)
 
-
-}

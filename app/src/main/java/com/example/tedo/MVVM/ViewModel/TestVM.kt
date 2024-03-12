@@ -1,8 +1,8 @@
-package com.example.tedo.MVVM.Model
+package com.example.tedo.MVVM.ViewModel
 
-data class Test(
+data class TestVM(
     var Title: String,
-    var TestDocument: TestDocument? = null,
+    var TestDocument: TestDocumentVM? = null,
     var TestProcedure: String,
     var Description: String,
     var IATInitials: String,

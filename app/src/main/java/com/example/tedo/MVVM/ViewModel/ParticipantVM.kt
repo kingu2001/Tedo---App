@@ -1,10 +1,10 @@
-package com.example.tedo.MVVM.Model
+package com.example.tedo.MVVM.ViewModel
 
 import android.text.format.DateFormat
 
-data class Participant(
+data class ParticipantVM(
     var Name: String,
-    var Firm: Firm,
+    var Firm: FirmVM,
     var Signature: String,
     var Date: DateFormat
 )
