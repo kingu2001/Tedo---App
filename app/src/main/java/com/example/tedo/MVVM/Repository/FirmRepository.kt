@@ -42,12 +42,12 @@ class FirmRepository{
     fun update(firm : Firm) : Firm?{
         val existingFirm = firms.find { it.Name == firm.Name }
         return existingFirm?.apply {
-            var name = firm.Name
-            var fullAddress = firm.FullAddress
-            var sat = firm.SAT
-            var iat = firm.IAT
-            var oat = firm.OAT
-            var fat = firm.FAT
+            Name = firm.Name
+            FullAddress = firm.FullAddress
+            SAT = firm.SAT
+            IAT = firm.IAT
+            OAT = firm.OAT
+            FAT = firm.FAT
         }
     }
 
