@@ -1,12 +1,15 @@
 package com.example.tedo.MVVM.ViewModel
 
-data class TestVM(
-    var Title: String,
-    var TestDocument: TestDocumentVM? = null,
-    var TestProcedure: String,
-    var Description: String,
-    var IATInitials: String,
-    var FATInitials: String,
-    var SATInitials: String,
-    var OATInitials: String
-)
+import com.example.tedo.MVVM.Model.Test
+import com.example.tedo.MVVM.Model.TestDocument
+
+class TestVM(test : Test){
+    val title: String? = test.Title
+    val testDocument: TestDocument? = test.TestDocument
+    val testProcedure: String? = test.TestProcedure
+    val description: String? = test.Description
+    val iatInitials: String? = test.IATInitials
+    val fatInitials: String? = test.FATInitials
+    val satInitials: String? = test.SATInitials
+    val oatInitials: String? = test.OATInitials
+}

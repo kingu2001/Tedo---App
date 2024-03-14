@@ -1,7 +1,9 @@
 package com.example.tedo.MVVM.ViewModel
+import com.example.tedo.MVVM.Model.DefinitionAndAbbreviation
+import com.example.tedo.MVVM.Model.TestDocument
 
-data class DefinitionAndAbbreviationVM(
-    var Definition : String,
-    var Abbreviation : String,
-    var TestDocument : TestDocumentVM? = null
-)
+class DefinitionAndAbbreviationVM(definitionAndAbbreviation: DefinitionAndAbbreviation){
+    val definition : String? = definitionAndAbbreviation.Definition
+    val abbreviation : String? = definitionAndAbbreviation.Abbreviation
+    val TestDocument : TestDocument? = definitionAndAbbreviation.TestDocument
+}
