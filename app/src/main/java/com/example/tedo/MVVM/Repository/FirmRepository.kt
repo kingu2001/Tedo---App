@@ -1,4 +1,4 @@
-package com.example.tedo.MVVM.Repository
+/*package com.example.tedo.MVVM.Repository
 import com.example.tedo.MVVM.Model.Firm
 import com.example.tedo.MVVM.Model.Participant
 
@@ -50,4 +50,4 @@ class FirmRepository{
             var fat = firm.FAT
         }
     }
-}
+}*/

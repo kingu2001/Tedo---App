@@ -10,7 +10,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.tedo.MVVM.View.Login
+import com.example.tedo.MVVM.View.LoginView
+import com.example.tedo.MVVM.View.MainView
+import com.example.tedo.MVVM.View.Navigation
 import com.example.tedo.ui.theme.TeDoTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Login()
+                    Navigation()
                 }
             }
         }
