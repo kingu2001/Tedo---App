@@ -1,6 +1,8 @@
 plugins {
+    id("kotlin-kapt")
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+
 }
 
 android {
@@ -50,14 +52,19 @@ android {
 }
 
 dependencies {
-    /** Compose ViewModel **/
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
-    /** Network calls **/
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    /** JSON to Kotlin object mapping **/
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    /** Image loading **/
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    val nav_version = "2.7.5"
+    val compose_version = "1.6.0-alpha08"
+    val room = "2.6.0"
+    //Room
+    implementation("androidx.room:room-runtime:$room")
+    implementation("androidx.room:room-ktx:$room")
+    kapt("androidx.room:room-compiler:$room")
+
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+    implementation("androidx.core:core-ktx:1.7.0")
+    implementation("androidx.compose.ui:ui:$compose_version")
+    implementation("androidx.compose.material:material:$compose_version")
+    implementation("androidx.compose.ui:ui-tooling-preview:$compose_version")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")

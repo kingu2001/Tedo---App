@@ -24,7 +24,10 @@ import com.example.tedo.MVVM.ViewModel.UserVM
 fun LoginView(
     /*userVM: UserVM,*/
     navController: NavController
+
 ) {
+
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -43,10 +46,9 @@ fun LoginView(
         Text("Kodeord", fontWeight = FontWeight.Bold)
         OutlinedTextField(value = "Kodeord", onValueChange = {}, shape = RoundedCornerShape(12.dp))
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navController.navigate(Screen.HomeScreen.route) }) {
+        Button(onClick = {navController.navigate(Screen.HomeScreen.route) }) {
             Text("Login")
         }
     }
-
-
 }
+

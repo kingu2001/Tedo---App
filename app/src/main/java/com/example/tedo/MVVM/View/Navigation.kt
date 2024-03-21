@@ -10,7 +10,7 @@ import com.example.tedo.MVVM.ViewModel.UserVM
 
 @Composable
 fun Navigation(
-    userVM: UserVM = viewModel(),
+    /*userVM: UserVM = viewModel(),*/
     navController: NavHostController = rememberNavController()
 ) {
     NavHost(
@@ -21,7 +21,7 @@ fun Navigation(
             LoginView(/*userVM,*/ navController)
         }
         composable(Screen.HomeScreen.route){
-            MainView(/*userVM, navController*/)
+            MainView(/*userVM,*/ navController)
         }
 
     }

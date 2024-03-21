@@ -20,8 +20,8 @@ import com.example.tedo.MVVM.ViewModel.UserVM
 
 @Composable
 fun MainView(
-    /*userVM: UserVM,
-    navController: NavController*/
+    /*userVM: UserVM,*/
+    navController: NavController
 ) {
     val snackMessage = remember {
         mutableStateOf("")
