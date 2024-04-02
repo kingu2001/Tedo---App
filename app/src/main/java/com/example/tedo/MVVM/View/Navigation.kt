@@ -23,6 +23,5 @@ fun Navigation(
         composable(Screen.HomeScreen.route){
             MainView(/*userVM,*/ navController)
         }
-
     }
 }
